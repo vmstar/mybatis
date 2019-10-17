@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vmstar.dao.TimeDepositMapper">
+    <resultMap id="BaseResultMap"
+               type="com.vmstar.db.TimeDepositDO">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="platform" jdbcType="INTEGER" property="platform"/>
+        <result column="prod_code" jdbcType="INTEGER" property="prodCode"/>
+        <result column="prod_name" jdbcType="INTEGER" property="prodName"/>
+    </resultMap>
+
+    <select id="selectOne" resultMap="BaseResultMap">
+        select * from app.oe_comp_data_high_frequency
+    </select>
+</mapper>
